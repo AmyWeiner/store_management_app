@@ -21,10 +21,19 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Sign In</a></li>
-      <li><a href="#">Sign Up</a></li>
-      <li class="dropdown">
-        </ul>
+    	<li><%= link_to "Home", controller: "site" %></li>
+       <% if false %>
+      <% if signed_in? %>
+          <li><%= link_to "My profile", current_user %></li>
+          <li>
+            <%= link_to "Sign out", signout_path, method: "delete" %>
+          </li>
+        <% else %>
+          <li><%= link_to "Sign up", signup_path %></li>
+          <li><%= link_to "Sign in", signin_path %></li>
+        <% end %>
+         <% end %>
+    
       </li>
     </ul>
       </nav>
