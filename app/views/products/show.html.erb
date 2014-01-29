@@ -1,0 +1,37 @@
+<h1>Product Details</h1>
+
+<p>
+  <strong>Product Name:</strong>
+  <%= @product.name %>
+</p>
+ 
+<p>
+  <strong>Product Price:</strong>
+  <%= @product.price %>
+</p>
+
+<p>
+  <strong> Product Description:</strong>
+  <%= @product.description %>
+</p>
+
+<h3>Associated Categories</h3>
+
+<table>
+<% @product.categories.each do |category| %>
+  <tr>
+  	<td><%= category.name %></td>
+    <td></td><td></td><td></td><td></td><td></td>
+</tr>
+<% end %>
+</table>
+
+
+<div>
+<%= link_to 'Edit', edit_product_path(@product) %>
+</div>
+
+<div>
+	<%= link_to "Home", controller: "site" %>
+</div>
+
