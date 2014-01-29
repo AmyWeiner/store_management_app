@@ -22,7 +22,7 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
     	<li><%= link_to "Home", controller: "site" %></li>
-       <% if false %>
+       
       <% if signed_in? %>
           <li><%= link_to "My profile", current_user %></li>
           <li>
@@ -32,7 +32,7 @@
           <li><%= link_to "Sign up", signup_path %></li>
           <li><%= link_to "Sign in", signin_path %></li>
         <% end %>
-         <% end %>
+         
     
       </li>
     </ul>
